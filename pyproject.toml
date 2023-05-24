@@ -1,0 +1,15 @@
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 88
+ignore = ["E501"]
+
+[tool.mypy]
+allow_redefinition = "True"
+ignore_missing_imports = "True"
+show_error_codes = "True"
