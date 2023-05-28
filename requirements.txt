@@ -1,3 +1,4 @@
+arxiv==1.4.7
 black==23.3
 ipdb==0.13
 mypy==1.3
