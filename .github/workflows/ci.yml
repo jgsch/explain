@@ -16,19 +16,17 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install requirements
-        run: pip install -r requirements.txt
+      - name: Install explain
+        run: pip install -e .
 
-      - name: Run Black
+      - name: Run black
         run: black --check --config=pyproject.toml .
 
-      - name: Run Ruff
+      - name: Run ruff
         run: ruff check --config pyproject.toml .
 
-      # - name: Run Mypy
-      #   run: mypy --config-file=pyproject.toml .
-      # TODO uncomment when python files
+      - name: Run mypy
+        run: mypy --config-file=pyproject.toml .
 
-      # - name: Run unit-tests
-      #   run: pytest --cov=<FOLDER> --cov-report term-missing --durations=5 --disable-warnings tests/
-      # TODO uncomment when unit tests
+      - name: Run unit-tests
+        run: pytest --cov=explain tests/

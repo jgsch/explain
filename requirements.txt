@@ -11,6 +11,7 @@ pre-commit==3.3
 pypdf==3.9.0
 pytest==7.3
 pytest-cov==4.0
+pytest-mock==3.10.0
 sentence_transformers==2.2.2
 rich==13.3.5
 ruff==0.0.269
